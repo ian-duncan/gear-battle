@@ -405,22 +405,45 @@ h1::before {
         font-size: 1rem;
         display: block;
     }
-    .affiliate-disclosure {
-        font-size: 0.6rem;
-        padding: 8px;
-    }
 }
 
-.affiliate-disclosure {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+/* Share button styles */
+.share-section {
+    margin-top: 1rem;
+}
+
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #1DA1F2;
     color: #fff;
-    text-align: center;
-    font-size: 0.7rem;
-    z-index: 1000;
-    border-top: 1px solid rgba(255, 0, 0, 0.3);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.share-button:hover {
+    background: #1a91da;
+}
+
+.share-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 600px) {
+    .share-button {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .share-button svg {
+        width: 16px;
+        height: 16px;
+    }
 } 

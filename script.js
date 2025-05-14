@@ -190,6 +190,23 @@ function showResults() {
         `;
     }).join('');
     finalResultsElement.innerHTML = resultsList;
+
+    // Set up share functionality
+    setupShareButton(finalWinner);
+}
+
+// Add share functionality
+function setupShareButton(winner) {
+    const shareButton = document.getElementById('share-button');
+    const shareText = `${winner.brand} ${winner.model} 🏆 won after 10 rounds in GEAR BATTLE! 🎸 Try it yourself at https://gearbattle.netlify.app 🎮`;
+    
+    // Create Twitter share URL
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+    
+    shareButton.addEventListener('click', () => {
+        // Open Twitter share in a new window
+        window.open(tweetUrl, '_blank', 'width=600,height=400');
+    });
 }
 
 // Reset game
