@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This or That - Pedal Battle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg style="position: absolute; width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="dither">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+                <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0"/>
+                <feComposite operator="in" in2="SourceGraphic"/>
+            </filter>
+        </defs>
+    </svg>
+    <div class="container">
+        <h1 data-text="GEAR BATTLE">GEAR BATTLE</h1>
+        <div class="round-counter">Round: <span id="current-round">1</span>/10</div>
+        <div class="battle-container" id="battle-container">
+            <div class="pedal-card" id="pedal1">
+                <div class="pedal-image">
+                    <img src="placeholder.svg" alt="Pedal 1">
+                </div>
+                <div class="pedal-info">
+                    <div class="brand">Brand 1</div>
+                    <div class="model">Model 1</div>
+                </div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="pedal-card" id="pedal2">
+                <div class="pedal-image">
+                    <img src="placeholder.svg" alt="Pedal 2">
+                </div>
+                <div class="pedal-info">
+                    <div class="brand">Brand 2</div>
+                    <div class="model">Model 2</div>
+                </div>
+            </div>
+        </div>
+        <div class="results" id="results" style="display: none;">
+            <h2 id="congrats-message"></h2>
+            <div id="final-results"></div>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <div class="reverb-banner">
+        <!-- START ADVERTISER: Reverb (US) from awin.com -->
+        <!-- <a rel="sponsored" href="https://www.awin1.com/cread.php?s=3526281&v=67144&q=479083&r=1772610">
+            <img src="https://www.awin1.com/cshow.php?s=3526281&v=67144&q=479083&r=1772610" border="0" alt="Reverb.com">
+        </a> -->
+        <!-- END ADVERTISER: Reverb (US) from awin.com -->
+    </div>
+    <footer class="affiliate-disclosure">
+        This site contains affiliate links to Reverb.com
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
